@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Positive EV Bet Finder</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Free Python script that scans odds and shows you only positive-expected-value bets.">
+  <meta property="og:title" content="Positive EV Bet Finder Tool">
+  <meta property="og:description" content="Download a free tool to find +EV bets for Esports matchups.">
+  <meta property="og:image" content="https://source.unsplash.com/1600x900/?esports,betting">
+  <meta property="og:url" content="https://posev-arbitrage.com">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>body { font-family: 'Inter', sans-serif; }</style>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Hero -->
+  <section class="relative bg-cover bg-center h-[90vh] flex items-center justify-center" style="background-image: url('https://source.unsplash.com/1600x900/?esports,betting');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative text-center text-white z-10 px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Find Positive Ev Bets On Your Favorite LCK Teams</h1>
+      <p class="text-lg mb-6">Download the tool. Find the odds from your favorite Esports betting site. Get positive ev bets.<br>Free, open-source Python tool.</p>
+      <a href="tool.py" download class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition">⬇️ Download Tool</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-16 bg-gray-100 text-center">
+    <h2 class="text-3xl font-bold mb-8">Features</h2>
+    <div class="flex flex-wrap justify-center gap-8 px-4">
+      <div class="bg-white p-6 rounded-lg shadow w-64">
+        <div class="text-green-500 text-4xl mb-4">✅</div>
+        <h3 class="font-semibold text-xl mb-2">Auto EV Calculation</h3>
+        <p>Instantly flags +EV bets</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow w-64">
+        <div class="text-blue-500 text-4xl mb-4">📥</div>
+        <h3 class="font-semibold text-xl mb-2">CSV Input</h3>
+        <p>Drag-and-drop your odds file</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow w-64">
+        <div class="text-red-500 text-4xl mb-4">🚫</div>
+        <h3 class="font-semibold text-xl mb-2">Filters Out -EV Bets</h3>
+        <p>Only displays profitable wagers</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EV Chart -->
+  <section class="py-16 text-center px-4">
+    <h2 class="text-3xl font-bold mb-4">EV vs. Probability</h2>
+    <p class="mb-6 max-w-xl mx-auto text-gray-600">This tool is for educational purposes only. Do not use it where gambling is restricted. Use responsibly.</p>
+    <svg id="d3-ev-chart" width="600" height="400" class="mx-auto"></svg>
+  </section>
+
+  <!-- Learn More Section -->
+  <section class="py-16 text-center bg-gray-100 px-4">
+    <h2 class="text-3xl font-bold mb-6">Watch Tutorial Videos</h2>
+    <p class="mb-8 text-gray-600 max-w-xl mx-auto">
+      Visit our YouTube channel for full video guides and updates.
+    </p>
+    <a href="https://www.youtube.com/@posev-arbitrage" target="_blank"
+       class="inline-block px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg shadow transition">
+      📺 Visit YouTube Channel
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-400 text-sm py-8">
+    <p>This tool is for educational purposes only. Do not use it where gambling is restricted. Use responsibly. Must be 21+</p>
+    <p class="mt-2">&copy; 2025 Jun An • <a href="mailto:junan@uchicago.edu" class="text-blue-600 hover:underline">Contact</a></p>
+  </footer>
+
+  <script src="js/ev-chart.js"></script>
+</body>
+</html>
